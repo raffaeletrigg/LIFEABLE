@@ -1,8 +1,29 @@
-<%= simple_form_for @life do |f| %>
+<%#= simple_form_for @life do |f| %>
   <div class="form-group text-left">
+    <%= simple_form_for @life do |f| %>
     <%= f.input :title, label: "How would you name your life?", placeholder: "Kim the Berliner" %>
 
-    <%= f.input :job, label: "What is your job?", placeholder: "Developper" %>
+    <!-- NB while looking at the fields of this for myou will notice a "*" in all the fields required -->
+    <!-- the next 4 attempts are my try to get rid of that "*" in the first fields -->
+    <!-- once the solution is found, please repeat it for job, lifestyle, city and description -->
+
+    <!-- TRY N.2 -->
+    <%#= f.input :title, label: "How would you name your life 2?", placeholder: "Kim the Berliner" %>
+
+    <!-- TRY N.3 -->
+    <%#= f.label :title, label: "How would you name your life 3?", placeholder: "Kim the Berliner" %>
+    <%#= f.input :title %>
+
+    <!-- TRY N.4 -->
+    <%#= f.label :title, "How would you name your life 4?", label: false, placeholder: "Kim the Berliner" %>
+    <%#= f.input :title %>
+
+    <!-- TRY N.5 -->
+    <%#= f.label :title, "How would you name your life 5?"%>
+    <%#= f.text_field :title %>
+
+
+    <%= f.input :job, label: "What is your job?", placeholder: "Developer" %>
 
     <%= f.input :lifestyle, label: "What's your style of life?", placeholder: "Adventurous", collection: ["Adventurous", "Boring", "Glam", "Fun", "Decadent", "Rockstar", "Shameless", "Creative", "Ruler"] %>
 
@@ -13,5 +34,6 @@
     <%= f.input :photo, as: :file, label: "Show a bit more of your life!", class: "form-control-file" %>
     <%#= f.button :submit , "Create Life", id: "create-btn", class:"white-text"%>
     <%= f.button :submit , "Create Life",  class:"white-text lives-new-btn"%>
+    <% end %>
   </div>
-<% end %>
+<%# end %>
