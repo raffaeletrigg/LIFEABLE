@@ -35,7 +35,6 @@ class LifePolicy < ApplicationPolicy
   def user_as_owner_or_admin?
     user == record.user
   end
-
 end
 
 # a policy file is meant to PROTECT its own controller
