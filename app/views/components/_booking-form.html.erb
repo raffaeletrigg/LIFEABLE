@@ -7,8 +7,10 @@
     <%= simple_form_for([@life, @booking]) do |f|%>
       <div class="row mb-2 justify-content-sm-between justify-content-md-around justify-content-lg-around border border-primary">
         <!-- <div class="col d-flex justify-content-between"> -->
+        <div class="col text-center">
         <%= f.label :start_date %>
-        <%= f.date_field :start_date %>
+        </div>
+        <%= f.date_field :start_date, class:"book-form-label" %>
         <!-- </div> -->
         <!-- <div class="col"> -->
         <%#= f.date_field :start_date %>
