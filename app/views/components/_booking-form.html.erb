@@ -1,20 +1,38 @@
 
-<div class="next-to">
-  <div class="superman-picture"></div>
-<%= simple_form_for([@life, @booking]) do |f|%>
-  <div class="form-group text-center">
-    <br>
-    <br>
-    <%= f.label :start_date %>
-    <div><%= f.date_field :start_date %>
-    <br>
-    <%= f.label :end_date %>
-    <br>
-    <%= f.date_field :end_date%>
-    <br>
+<div class="col d-flex justify-content-center">
+  <!-- I AM COMMENTING OUT THE SUPERMAN IMAGE -->
+  <!-- <div class="superman-picture col-sm-0 col-md-0 col-lg-0"> -->
+  <!-- </div> -->
+
+  <%#= simple_form_for([@life, @booking]) do |f|%>
+  <div class="form-group col-sm-9 col-md-9 col-lg-6 align-self-center p-4 border border-secondary">
+    <%= simple_form_for([@life, @booking]) do |f|%>
+      <div class="row mb-2 justify-content-sm-around justify-content-md-around justify-content-lg-around border border-primary">
+        <div class="col d-flex justify-content-between book-form-label">
+        <!-- <div class="col text-center"> -->
+        <%= f.label :start_date %>
+        <!-- </div> -->
+        <%= f.date_field :start_date %>
+        </div>
+        <!-- <div class="col"> -->
+        <%#= f.date_field :start_date %>
+        <!-- </div> -->
+      </div>
+      <div class="row mt-2 justify-content-sm-around justify-content-md-around justify-content-lg-around border border-primary">
+        <div class="col d-flex justify-content-between book-form-label">
+        <%= f.label :end_date %>
+        <%= f.date_field :end_date%>
+        </div>
+        <!-- <div class="col"> -->
+        <%#= f.date_field :end_date%>
+        <!-- </div> -->
+      </div>
+      <div class="row justify-content-center d-flex align-items-center mt-4 border border-primary">
+        <%#= f.button :submit , "Book now", id: "home-btn"%>
+        <%= f.button :submit , "Book Now", class:"white-text bookings-new-btn"%>
+      </div>
+    <% end %>
   </div>
-  <%#= f.button :submit , "Book now", id: "home-btn"%>
-  <%= f.button :submit , "Book Now", class:"white-text bookings-new-btn"%>
-<% end %>
+  <%# end %>
 </div>
 

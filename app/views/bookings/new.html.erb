@@ -1,10 +1,12 @@
-<div class="container mt-2 mb-2">
+<div class="container">
   <div class="row justify-content-center">
-    <div class=“col-6”>
-      <br>
-      <h2 class=“text-center”>Hey <%= current_user.first_name %>, when do you want to book?</h2>
-        <%= render "components/booking-form" %>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="mt-2 mb-2 pt-2">
+        <h3 class="text-center">Hey <%= current_user.first_name %></h3>
+        <h4 class="text-center mb-4">when do you want to book?</h4>
+      </div>
+        <%#= render "components/booking-form" %>
     </div>
   </div>
+  <%= render "components/booking-form" %>
 </div>
-
