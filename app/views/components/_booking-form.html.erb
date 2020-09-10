@@ -3,15 +3,25 @@
   <div class="superman-picture">
   </div>
   <%#= simple_form_for([@life, @booking]) do |f|%>
-  <div class="form-group text-center">
+  <div class="form-group col-sm-6 col-md-6 col-lg-6">
     <%= simple_form_for([@life, @booking]) do |f|%>
-      <div class="row">
+      <div class="row mb-2">
+        <div class="col">
         <%= f.label :start_date %>
         <%= f.date_field :start_date %>
+        </div>
+        <!-- <div class="col"> -->
+        <%#= f.date_field :start_date %>
+        <!-- </div> -->
       </div>
       <div class="row">
+        <div class="col">
         <%= f.label :end_date %>
         <%= f.date_field :end_date%>
+        </div>
+        <!-- <div class="col"> -->
+        <%#= f.date_field :end_date%>
+        <!-- </div> -->
       </div>
       <div class="row justify-content-center">
         <%#= f.button :submit , "Book now", id: "home-btn"%>
