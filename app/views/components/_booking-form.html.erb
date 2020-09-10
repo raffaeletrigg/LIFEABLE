@@ -1,9 +1,9 @@
 
-<div class="col next-to">
+<div class="col d-flex justify-content-between">
   <div class="superman-picture col-sm-6 col-md-6 col-lg-6">
   </div>
   <%#= simple_form_for([@life, @booking]) do |f|%>
-  <div class="form-group col-sm-6 col-md-6 col-lg-6 border border-primary">
+  <div class="form-group col-sm-6 col-md-6 col-lg-6 align-self-center border border-primary">
     <%= simple_form_for([@life, @booking]) do |f|%>
       <div class="row mb-2 justify-content-sm-between justify-content-md-around justify-content-lg-around border border-primary">
         <!-- <div class="col d-flex justify-content-between"> -->
@@ -14,7 +14,7 @@
         <%#= f.date_field :start_date %>
         <!-- </div> -->
       </div>
-      <div class="row mt-2justify-content-sm-between justify-content-md-around justify-content-lg-around border border-primary">
+      <div class="row mt-2 justify-content-sm-between justify-content-md-around justify-content-lg-around border border-primary">
         <!-- <div class="col d-flex justify-content-between"> -->
         <%= f.label :end_date %>
         <%= f.date_field :end_date%>
